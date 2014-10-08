@@ -27,7 +27,7 @@ Note: `client_id`, `redirect_uri`, `client_secret` are constants that you get,
 when [register](https://sp-money.yandex.ru/myservices/new.xml) app in Yandex.Money API.
 
     ```javascript
-    var yandexMoney = require("yandex-money");
+    var yandexMoney = require("yandex-money-sdk");
     // scope is array(e.g. scope = ['account-info', 'operation-history'])
     url = yandexMoney.Wallet.buildObtainTokenUrl(clientId, redirectURI, scope);
     // redirect user to url
