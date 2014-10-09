@@ -13,10 +13,8 @@ describe('Wallet', function(){
 
   describe('#utils', function(){
     it('should return auth url for browser redirect', function(){
-      var clientId = "clientId";
-      var redirectURI = "redirectURI";
       var scope = ['account-info', 'operation-history'];
-      var url = Wallet.buildObtainTokenUrl(clientId, redirectURI, scope);
+      var url = Wallet.buildObtainTokenUrl(clientId, "http://localhost:8000/redirect", scope);
     });
 
     it("should exchange code to access token(fake)", function(done) {
