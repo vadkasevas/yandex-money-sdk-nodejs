@@ -53,7 +53,7 @@ when [register](https://sp-money.yandex.ru/myservices/new.xml) app in Yandex.Mon
 4. Now you can use Yandex.Money API.
 
     ```javascript
-    var api = yandexMoney.Wallet(access_token);
+    var api = new yandexMoney.Wallet(access_token);
 
     // get account info
     api.accountInfo(function infoComplete(err, data) {
@@ -130,7 +130,7 @@ result in DB).
 2. Make request payment
 
     ```javascript 
-    var external_payment = yandexMoney.ExternalPayment(instanceId)
+    var externalPayment = new yandexMoney.ExternalPayment(instanceId)
 
     var options = {
         // pattern_id, etc..
@@ -147,7 +147,7 @@ result in DB).
 3. Process the request with process-payment. 
 
     ```javascript 
-    external_payment.process({"request_id": requestId}, function (err, data) {
+    externalPayment.process({"request_id": requestId}, function (err, data) {
         if(err) {
             // process error
         }
