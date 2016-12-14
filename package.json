@@ -10,7 +10,7 @@
     "yandex",
     "money",
     "sdk"
-  ],
+  ], 
   "dependencies": {
     "request": "2.9.x"
   },
